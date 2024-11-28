@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #172c44, #84a8d8);
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+a {
+    color: #172c44;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(84, 84, 154);
+}
+
+.mb {
+    margin-bottom: 1.5rem;
+}
+
+.box {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border-top: 4px solid #5387bf;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.title {
+    color: #5387bf;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #5387bf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #406ba5;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .box {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
